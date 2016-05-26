@@ -5,7 +5,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   xml.link "href" => data.site.host
   xml.link "href" => URI.join(data.site.host, '/feed.xml'), "rel" => "self"
   xml.updated(page_articles.first.date.to_time.iso8601) unless page_articles.empty?
-  xml.author { xml.name "Icelab" }
+  xml.author { xml.name "Robbie Mackay" }
 
   page_articles[0..50].each do |article|
     xml.entry do

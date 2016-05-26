@@ -4,9 +4,10 @@ html lang="en-au"
     = partial "partials/meta"
     script
       = render_asset(asset_path(:js, "assets/inline-header"))
-    link rel="shortcut icon" href=image_path("assets/public/favicon.png")
+    link rel="shortcut icon" href=image_path("assets/public/favicon.ico")
     link rel="stylesheet" type="text/css" href=asset_path(:css, "assets/public")
-    link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700:latin" rel="stylesheet" type="text/css"
+    link href= "https://fonts.googleapis.com/css?family=Montserrat" rel= "stylesheet" type= "text/css"
+    link href= "https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic" rel= "stylesheet" type= "text/css"
     script src=asset_path(:js, "assets/public") async=true
     title
       - if current_page.data.title
@@ -30,7 +31,7 @@ html lang="en-au"
             i = articles.size
             |)
     .header
-      a.header__logo href="http://www.icelab.com.au"
+      a.header__logo href="https://robbiemackay.com"
       = link_to data.site.name, "/", :class => "header__til-text"
       == yield_content(:topic_tag)
 
@@ -43,8 +44,8 @@ html lang="en-au"
       = yield
 
     .footer
-      ' A knowledgebase of little learnings from the team at Icelab.
-      | <a href="https://github.com/icelab/til/">Source on GitHub</a>.
+      ' A knowledgebase of little learnings from <a href="https://robbiemackay.com">Me</a>.
+      | <a href="https://github.com/rjmackay/til/">Source on GitHub</a>.
 
 
     script

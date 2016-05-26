@@ -6,52 +6,12 @@ require('fontfaceobserver')
  */
 var fontsToCheck = [
   {
-    family: 'National',
-    style: 'normal',
-    weight: 'normal'
-  },
-  {
-    family: 'National',
-    style: 'italic',
-    weight: 'normal'
-  },
-  {
-    family: 'National',
-    style: 'italic',
-    weight: 'bold'
-  },
-  {
-    family: 'National',
-    style: 'italic',
-    weight: 'bold'
-  },
-  {
-    family: 'TiemposText',
-    style: 'normal',
-    weight: 'normal'
-  },
-  {
-    family: 'TiemposText',
-    style: 'italic',
-    weight: 'normal'
-  },
-  {
-    family: 'TiemposText',
-    style: 'italic',
-    weight: 'bold'
-  },
-  {
-    family: 'TiemposText',
-    style: 'italic',
-    weight: 'bold'
-  },
-  {
-    family: 'Inconsolata',
+    family: 'Montserrat',
     style: 'normal',
     weight: '400'
   },
   {
-    family: 'Inconsolata',
+    family: 'Droid Serif',
     style: 'italic',
     weight: '400'
   }

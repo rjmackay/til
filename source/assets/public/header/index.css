@@ -14,8 +14,10 @@
 }
 
 .header__logo {
-  background-image: url(icelab-logo.png);
+  background-image: url(https://en.gravatar.com/avatar/314d3c07bc68ef10f2f8d39cdfbb9c40.jpeg?s=40); //avatar?
   background-size: 3.4rem 3.4rem;
+  background-position: 50% 50%;
+  border-radius: 3.4rem;
   float: left;
   height: 3.4rem;
   margin-top: -1rem;
