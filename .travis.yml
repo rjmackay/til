@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+- 2.3.0
+branches:
+  only:
+  - master
+cache: bundler
+before_install:
+  - nvm install node
+install:
+  - bin/setup
+before_script:
+- git config --global user.name '${GIT_NAME}'
+- git config --global user.email '${GIT_EMAIL}'
+- git remote set-url origin https://rjmackay:${GH_TOKEN}@github.com/rjmackay/til.git
+script:
+- bundle exec middleman deploy
+env:
+  global:
+  - GIT_NAME: Robbie Mackay
+  - GIT_EMAIL: rm@robbiemackay.com
+  - secure: 8j9kONQh9lURBBEK42EnWgTRGvwpVeVmjRQzAFPR0UYoADxD+PVBKSV9TCj7eBUySx0TXbU1oYc69/p95XJ1VFQYFx1w42flosW52s6PkD45Uy9pmd5zFeJlQDqdTWlAhzdFd5NVMyKs2lttH2zZjRI2Qw9G4gFMuBvI3gS3YaUD1sYbJ8h0Qso/kf4ufs6ZgfT6GXvflEqhMS/bg3+ba7glMiNI3sUIG44n9+rNncb34JhGgEiNlM3FluRx73nqUFUAuzZnjUrLReJ/U5Kb4j/0B8vur2gDD59gFixman5ukFrswav4yBRMWBZRb8xTlfhWxqGPl319S0FRRe0NCYerW83tpt/sFkkHJAIW9V7m7sOmcIFqJwN/CbNNOg2d/Ru4YYOCHg3vWX+Jvmyu4dHMApEWYL1vVx5JpGd0eCE0T9cZikmW9bqHQvhuIm5NUPAAYUn2HFlmAQYSuDBFlSxbO4wgAY559JDUVxlJMwmF6uOWlvD42RFaZIq4FpUGP7acwRyTTlXamtX1+B7E0LogcNVR6fBT11DlClKnixMIpy0HNelkDCqGS+NAY2btC6E/w0byDj2r899Cka2GhIYBAI2Twwk7qludEvic/wZxD77LcXcktKHZF5AUDe3IAtRqWAu8gpxJfaqe+vvsUdfWtQ1871bwbQJgabvh+YI=
