@@ -4,7 +4,7 @@
     .article__meta
       = current_page.data.author
       ',
-      = current_page.data.date.strftime("%d %B %Y")
+      = current_page.date.strftime("%d %B %Y")
     .article__content data-view-highlight=true
       = yield
     .article__tags

@@ -5,7 +5,7 @@
   .article__meta
     = article.data.author
     ',
-    = article.data.date.strftime("%d %B %Y")
+    = article.date.strftime("%d %B %Y")
   .article__content data-view-highlight=true
     = article.body
   .article__tags
